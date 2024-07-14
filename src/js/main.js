@@ -297,7 +297,6 @@ function getFlagEmoji(country) {
 
   return countryCodes[country] || "";
 }
-
 async function getIngredients() {
   rowData.innerHTML = "";
   $(".inner-loading").fadeIn(300);
