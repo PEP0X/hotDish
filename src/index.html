@@ -4,16 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hot Dish 🥘</title>
-    <!-- Main Css -->
+    <!-- Tailwind Css -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- Loading -->
+    <div
+      id="loading"
+      class="fixed inset-0 flex items-center justify-center bg-black z-50"
+    >
+      <span class="loading loading-infinity loading-lg"></span>
+    </div>
+
     <!-- * Side Nav Menu -->
     <nav
-      class="bg-nav rounded-r-[25px] flex flex-col justify-between border-navContent fixed top-0 left-0 bottom-0 w-[250px] font-primary"
+      class="bg-nav rounded-r-[25px] flex flex-col justify-between border-navContent fixed top-0 left-0 bottom-0 w-[250px] font-primary collapsed"
     >
-      <div class="arrow absolute right-[-20px] top-[50%] translate-y-[-50%]">
-        <img src="./images/icons/Arrow-Nav-Left.svg" alt="" />
+      <div
+        class="arrow absolute right-[-40px] top-[50%] translate-y-[-50%] cursor-pointer"
+      >
+        <img src="./images/icons/Arrow-Nav-Right.svg" alt="" />
       </div>
       <div class="upper">
         <div class="logo">
@@ -62,15 +72,29 @@
         <div
           class="social flex justify-center gap-3 border-t-2 pt-5 w-[75%] mx-auto my-3"
         >
-          <img class="w-[50px]" src="./images/icons/Facebook@4x.png" alt="" />
-          <img class="w-[50px]" src="./images/icons/Discord@4x.png" alt="" />
-          <img class="w-[50px]" src="./images/icons/LinkedIn@4x.png" alt="" />
+          <img
+            class="w-[50px] cursor-pointer"
+            src="./images/icons/Facebook@4x.png"
+            alt=""
+          />
+          <img
+            class="w-[50px] cursor-pointer"
+            src="./images/icons/Discord@4x.png"
+            alt=""
+          />
+          <img
+            class="w-[50px] cursor-pointer"
+            src="./images/icons/LinkedIn@4x.png"
+            alt=""
+          />
         </div>
         <div class="copyRight">
           <p class="text-sm text-center my-3">© 2024 Hot Dish.</p>
         </div>
       </div>
     </nav>
+
+    <!-- ! Main Page -->
     <!-- Js -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
