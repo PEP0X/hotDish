@@ -6,9 +6,11 @@
     <title>Hot Dish 🥘</title>
     <!-- Tailwind Css -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
   </head>
   <body>
-    <!-- Loading -->
+    <!-- ! Loading -->
     <div
       id="loading"
       class="fixed inset-0 flex items-center justify-center bg-black z-50"
@@ -18,7 +20,7 @@
 
     <!-- * Side Nav Menu -->
     <nav
-      class="bg-nav rounded-r-[25px] flex flex-col justify-between border-navContent fixed top-0 left-0 bottom-0 w-[250px] font-primary collapsed"
+      class="bg-nav rounded-r-[25px] flex flex-col justify-between border-navContent fixed top-0 left-0 bottom-0 w-[250px] z-40 font-primary collapsed"
     >
       <div
         class="arrow absolute right-[-40px] top-[50%] translate-y-[-50%] cursor-pointer"
@@ -36,31 +38,31 @@
         <div class="nav-content">
           <ul class="menu rounded-box w-auto mt-5">
             <li class="mb-4">
-              <a>
+              <a id="nav-search">
                 <img src="./images/icons/search-normal.svg" alt="Search-icon" />
                 Search
               </a>
             </li>
             <li class="mb-4">
-              <a>
+              <a id="nav-categories">
                 <img src="./images/icons/category.svg" alt="Category-icon" />
                 Categories
               </a>
             </li>
             <li class="mb-4">
-              <a>
+              <a id="nav-area">
                 <img src="./images/icons/location-tick.svg" alt="Area-icon" />
                 Area
               </a>
             </li>
             <li class="mb-4">
-              <a>
+              <a id="nav-ingredients">
                 <img src="./images/icons/bubble.svg" alt="Area-icon" />
                 Ingredients
               </a>
             </li>
             <li class="mb-4">
-              <a>
+              <a id="nav-contact">
                 <img src="./images/icons/messages-2.svg" alt="Area-icon" />
                 Contact us
               </a>
@@ -72,21 +74,27 @@
         <div
           class="social flex justify-center gap-3 border-t-2 pt-5 w-[75%] mx-auto my-3"
         >
-          <img
-            class="w-[50px] cursor-pointer"
-            src="./images/icons/Facebook@4x.png"
-            alt=""
-          />
-          <img
-            class="w-[50px] cursor-pointer"
-            src="./images/icons/Discord@4x.png"
-            alt=""
-          />
-          <img
-            class="w-[50px] cursor-pointer"
-            src="./images/icons/LinkedIn@4x.png"
-            alt=""
-          />
+          <a href="https://www.facebook.com/OFFICIAL.ABANOUB.NASHAAT">
+            <img
+              class="w-[50px] cursor-pointer"
+              src="./images/icons/Facebook@4x.png"
+              alt=""
+            />
+          </a>
+          <a href="">
+            <img
+              class="w-[50px] cursor-pointer"
+              src="./images/icons/Discord@4x.png"
+              alt=""
+            />
+          </a>
+          <a href="">
+            <img
+              class="w-[50px] cursor-pointer"
+              src="./images/icons/LinkedIn@4x.png"
+              alt=""
+            />
+          </a>
         </div>
         <div class="copyRight">
           <p class="text-sm text-center my-3">© 2024 Hot Dish.</p>
@@ -95,6 +103,50 @@
     </nav>
 
     <!-- ! Main Page -->
+    <div class="main-page">
+      <!-- Welcome -->
+      <div
+        class="welcome flex flex-col items-center justify-center h-screen"
+        id="welcomeSection"
+      >
+        <h1 class="text-4xl sm:text-5xl font-normal font-tertiary">
+          Welcome to <span class="text-primary">Hot Dish !</span>
+        </h1>
+      </div>
+      <!-- Inner Loading -->
+      <div
+        class="inner-loading flex items-center justify-center h-screen"
+        id="innerLoading"
+      >
+        <span class="loading loading-infinity loading-lg"></span>
+      </div>
+
+      <!-- Search Container -->
+      <div class="container mx-auto" id="searchContainer"></div>
+      <!-- Meals -->
+      <div
+        class="container content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 justify-items-center content-center mx-auto"
+        id="rowData"
+      ></div>
+      <!-- Details -->
+      <div class="container hidden mx-auto" id="detailsContainer"></div>
+      <!-- Contact Us -->
+      <div class="container mx-auto hidden" id="contactContainer"></div>
+    </div>
+    <!-- Search Modal -->
+    <div
+      id="searchModal"
+      class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 items-center justify-center z-50"
+    >
+      <div class="bg-white p-4 rounded-lg shadow-lg w-full max-w-md">
+        <input
+          id="modalSearchInput"
+          type="text"
+          placeholder="Search..."
+          class="input input-bordered w-full"
+        />
+      </div>
+    </div>
     <!-- Js -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>

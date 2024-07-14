@@ -1,4 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,200;0,300;1,400;0,500;1,600;0,700;1,800;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main-page {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.content {
+  scroll-snap-align: start;
+}
+
+#detailsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.card-side figure {
+  width: 100%;
+  height: auto;
+}
+
+.card-side img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+  max-height: 60vh; /* Limit the height of the card body */
+  overflow-y: auto; /* Add scroll if content overflows */
+}
+
+#detailsContainer.hidden {
+  display: none !important;
+}
+
+#searchContainer {
+  position: relative;
+}
+
+#searchContainer .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#rowData {
+  margin-top: 80px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  grid-column: span 4; /* Ensure it spans all columns */
+}
+
